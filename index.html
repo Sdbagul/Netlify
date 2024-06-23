@@ -3,99 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Sandip Bagul</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .portfolio {
+            margin-top: 50px;
+        }
+        .portfolio .section-title {
+            margin-bottom: 30px;
+        }
+        .portfolio .skills li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">Sandip Bagul</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container mt-5">
-        <section id="about" class="mb-5">
-            <h2 class="mb-3">About Me</h2>
-            <p>Highly skilled Full Stack Developer with 2 years of experience specializing in developing robust, scalable web
-                applications using Spring Boot and React.js. Proven ability to design, implement, and maintain both backend
-                services and frontend interfaces, ensuring seamless integration and high performance. Strong background in
-                developing RESTful APIs, managing databases, and delivering interactive, user-friendly UI components.</p>
+    <div class="container portfolio">
+        <div class="text-center">
+            <h1>Sandip Bagul</h1>
+            <h2>Full Stack Developer</h2>
+        </div>
+        <section class="summary">
+            <h3 class="section-title">Summary</h3>
+            <p>Highly skilled Full Stack Developer with 2 years of experience specializing in developing robust, scalable web applications using Spring Boot and React.js. Proven ability to design, implement, and maintain both backend services and frontend interfaces, ensuring seamless integration and high performance. Strong background in developing RESTful APIs, managing databases, and delivering interactive, user-friendly UI components.</p>
         </section>
-
-        <section id="projects" class="mb-5">
-            <h2 class="mb-3">My Projects</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Notify (Spring Boot, Microservices)</h3>
-                            <p class="card-text">Description: Developed a communication channel integration platform with a focus on voice, SMS, WhatsApp,
-                                and app notification APIs.</p>
-                            <p class="card-text">Role: Lead Developer</p>
-                            <p class="card-text">Technologies Used: Spring Boot, Microservices, Java, Apache Kafka</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Hostel Automation using Face Recognition and Voice Interface (Spring Boot)
-                            </h3>
-                            <p class="card-text">Description: Automated hostel management tasks, including student attendance tracking and parent
-                                notifications</p>
-                                <p class="card-text">Role: Back-End Developer</p>
-                                <p class="card-text">Technologies Used: Spring Boot, Face Recognition, Java</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
+        <section class="skills">
+            <h3 class="section-title">Skills</h3>
+            <ul class="list-unstyled">
+                <li><strong>Programming Languages:</strong> Java (Basic and Advanced), JavaScript</li>
+                <li><strong>Frameworks:</strong> Spring Boot, Spring MVC</li>
+                <li><strong>Development Tools:</strong> Eclipse, STS, VS Code, Postman</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                <li><strong>Microservices Architecture</strong></li>
+                <li><strong>Apache Kafka</strong></li>
+                <li><strong>ReactJS</strong></li>
+                <li><strong>HTML</strong></li>
+                <li><strong>CSS</strong></li>
+                <li><strong>API Integration</strong></li>
+                <li><strong>Git</strong></li>
+                <li><strong>Docker</strong></li>
+            </ul>
+        </section>
+        <section class="experience">
+            <h3 class="section-title">Professional Experience</h3>
+            <div>
+                <h4>Project Associate</h4>
+                <p>Centre for Development of Advanced Computing (C-DAC), Hyderabad, Telangana</p>
+                <p>01/09/2022 - Present</p>
+                <ul>
+                    <li>Developed and maintained microservices-based applications using Spring Boot.</li>
+                    <li>Implemented features and enhancements using Java, J2SE, and J2EE technologies.</li>
+                    <li>Collaborated with cross-functional teams to design and integrate APIs for communication channels, including voice, SMS, WhatsApp, and app notifications.</li>
+                    <li>Worked on Apache Kafka for event-driven data processing and messaging.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Web Developer Internship</h4>
+                <p>Nectawise, Market Research and Digital Marketing Solutions</p>
+                <p>02/2022 - 08/2022</p>
+                <ul>
+                    <li>Assisted in the development of an employee management portal using Spring MVC.</li>
+                    <li>Designed and implemented back-end functionalities.</li>
+                    <li>Collaborated with front-end developers for seamless integration.</li>
+                </ul>
             </div>
         </section>
-
-        <section id="contact" class="mb-5">
-            <h2 class="mb-3">Contact Me</h2>
-            <table class="table table-bordered">
-                <tbody>
-                  <tr>
-                    <td>Name</td>
-                    <td>Sandip Bagul</td>
-                  </tr>
-                  <tr>
-                    <td>Location</td>
-                    <td>Nashik 423401</td>
-                  </tr>
-                  <tr>
-                    <td>Mobile</td>
-                    <td>9392153017</td>
-                  </tr>
-                  <tr>
-                    <td>Linkedin</td>
-                    <td><a href="https://www.linkedin.com/in/sandipbagul/" target="_blank">https://www.linkedin.com/in/sandipbagul/</a></td>
-                  </tr>
-                </tbody>
-              </table>
+        <section class="education">
+            <h3 class="section-title">Education</h3>
+            <ul>
+                <li>
+                    <strong>BEIT</strong> - Savitribai Phule Pune University
+                    <br>Marks: 8.81
+                    <br>Year: 2022
+                </li>
+                <li>
+                    <strong>Diploma (CE)</strong> - Maharashtra State Board of Technical Education
+                    <br>Marks: 67%
+                    <br>Year: 2019
+                </li>
+            </ul>
         </section>
-    </main>
+        <section class="projects">
+            <h3 class="section-title">Projects</h3>
+            <div>
+                <h4>Notify (Spring Boot, Microservices)</h4>
+                <p><strong>Description:</strong> Developed a communication channel integration platform with a focus on voice, SMS, WhatsApp, and app notification APIs.</p>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p><strong>Technologies Used:</strong> Spring Boot, Microservices, Java, Apache Kafka</p>
+            </div>
+            <div>
+                <h4>Hostel Automation using Face Recognition and Voice Interface (Spring Boot)</h4>
+                <p><strong>Description:</strong> Automated hostel management tasks, including student attendance tracking and parent notifications.</p>
+                <p><strong>Role:</strong> Back-End Developer</p>
+                <p><strong>Technologies Used:</strong> Spring Boot, Face Recognition, Java</p>
+            </div>
+            <div>
+                <h4>Employee Management Portal (Spring MVC)</h4>
+                <p><strong>Description:</strong> Contributed to the development of an employee management portal.</p>
+                <p><strong>Role:</strong> Back-End Developer</p>
+                <p><strong>Technologies Used:</strong> Spring MVC, Java</p>
+            </div>
+        </section>
+        <section class="certifications">
+            <h3 class="section-title">Certifications</h3>
+            <ul>
+                <li>Software Security Course (C-DAC Hyderabad)</li>
+                <li>Problem Solving (HackerRank)</li>
+            </ul>
+        </section>
+        <section class="communication">
+            <h3 class="section-title">Communication</h3>
+            <ul>
+                <li><strong>English:</strong> Professional working proficiency</li>
+                <li><strong>Marathi:</strong> Native proficiency</li>
+                <li><strong>Hindi:</strong> Full professional working proficiency</li>
+            </ul>
+        </section>
+    </div>
 
-    <footer class="bg-light text-center py-3 mt-5">
-        <p>&copy; 2024 Sandip Bagul. All rights reserved.</p>
-    </footer>
-
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
