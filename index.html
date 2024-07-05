@@ -4,57 +4,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandip Bagul - Full Stack Developer</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        .portfolio {
-            margin-top: 50px;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
         }
-        .portfolio .section-title {
-            margin-bottom: 30px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .portfolio .skills li {
-            display: inline-block;
-            margin-right: 10px;
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
         }
-        .divider {
-            border-bottom: 1px solid #ddd;
-            margin: 40px 0;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background-image: url('https://source.unsplash.com/random/1600x900/?technology');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .skill-item i {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .experience-item, .project-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .experience-item h3, .project-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container portfolio">
-        <div class="text-center">
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Sandip Bagul</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
             <h1>Sandip Bagul</h1>
             <h2>Full Stack Developer</h2>
         </div>
-        <section class="summary">
-            <h3 class="section-title">Summary</h3>
+    </section>
+
+    <hr>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
             <p>Highly skilled Full Stack Developer with 2 years of experience specializing in developing robust, scalable web applications using Spring Boot and React.js. Proven ability to design, implement, and maintain both backend services and frontend interfaces, ensuring seamless integration and high performance. Strong background in developing RESTful APIs, managing databases, and delivering interactive, user-friendly UI components.</p>
         </section>
-        <div class="divider"></div>
-        <section class="skills">
-            <h3 class="section-title">Skills</h3>
-            <ul class="list-unstyled">
-                <li><strong>Programming Languages:</strong> Java (Basic and Advanced), JavaScript</li>
-                <li><strong>Frameworks:</strong> Spring Boot, Spring MVC</li>
-                <li><strong>Development Tools:</strong> Eclipse, STS, VS Code, Postman</li>
-                <li><strong>Databases:</strong> MySQL, MongoDB</li>
-                <li><strong>Microservices Architecture</strong></li>
-                <li><strong>Apache Kafka</strong></li>
-                <li><strong>ReactJS</strong></li>
-                <li><strong>HTML</strong></li>
-                <li><strong>CSS</strong></li>
-                <li><strong>API Integration</strong></li>
-                <li><strong>Git</strong></li>
-                <li><strong>Docker</strong></li>
-            </ul>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Spring Boot</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <h3>React.js</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL & MongoDB</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-docker"></i>
+                    <h3>Docker</h3>
+                </div>
+            </div>
         </section>
-        <div class="divider"></div>
-        <section class="experience">
-            <h3 class="section-title">Professional Experience</h3>
-            <div>
-                <h4>Project Associate</h4>
+
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <h3>Project Associate</h3>
                 <p>Centre for Development of Advanced Computing (C-DAC), Hyderabad, Telangana</p>
                 <p>01/09/2022 - Present</p>
                 <ul>
@@ -64,8 +249,8 @@
                     <li>Worked on Apache Kafka for event-driven data processing and messaging.</li>
                 </ul>
             </div>
-            <div>
-                <h4>Web Developer Internship</h4>
+            <div class="experience-item">
+                <h3>Web Developer Internship</h3>
                 <p>Nectawise, Market Research and Digital Marketing Solutions</p>
                 <p>02/2022 - 08/2022</p>
                 <ul>
@@ -75,65 +260,31 @@
                 </ul>
             </div>
         </section>
-        <div class="divider"></div>
-        <section class="education">
-            <h3 class="section-title">Education</h3>
-            <ul>
-                <li>
-                    <strong>BEIT</strong> - Savitribai Phule Pune University
-                    <br>Marks: 8.81
-                    <br>Year: 2022
-                </li>
-                <li>
-                    <strong>Diploma (CE)</strong> - Maharashtra State Board of Technical Education
-                    <br>Marks: 67%
-                    <br>Year: 2019
-                </li>
-            </ul>
-        </section>
-        <div class="divider"></div>
-        <section class="projects">
-            <h3 class="section-title">Projects</h3>
-            <div>
-                <h4>Notify (Spring Boot, Microservices)</h4>
-                <p><strong>Description:</strong> Developed a communication channel integration platform with a focus on voice, SMS, WhatsApp, and app notification APIs.</p>
-                <p><strong>Role:</strong> Lead Developer</p>
-                <p><strong>Technologies Used:</strong> Spring Boot, Microservices, Java, Apache Kafka</p>
-            </div>
-            <div>
-                <h4>Hostel Automation using Face Recognition and Voice Interface (Spring Boot)</h4>
-                <p><strong>Description:</strong> Automated hostel management tasks, including student attendance tracking and parent notifications.</p>
-                <p><strong>Role:</strong> Back-End Developer</p>
-                <p><strong>Technologies Used:</strong> Spring Boot, Face Recognition, Java</p>
-            </div>
-            <div>
-                <h4>Employee Management Portal (Spring MVC)</h4>
-                <p><strong>Description:</strong> Contributed to the development of an employee management portal.</p>
-                <p><strong>Role:</strong> Back-End Developer</p>
-                <p><strong>Technologies Used:</strong> Spring MVC, Java</p>
-            </div>
-        </section>
-        <div class="divider"></div>
-        <section class="certifications">
-            <h3 class="section-title">Certifications</h3>
-            <ul>
-                <li>Software Security Course (C-DAC Hyderabad)</li>
-                <li>Problem Solving (HackerRank)</li>
-            </ul>
-        </section>
-        <div class="divider"></div>
-        <section class="communication">
-            <h3 class="section-title">Communication</h3>
-            <ul>
-                <li><strong>English:</strong> Professional working proficiency</li>
-                <li><strong>Marathi:</strong> Native proficiency</li>
-                <li><strong>Hindi:</strong> Full professional working proficiency</li>
-            </ul>
-        </section>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <h3>Notify</h3>
+                    <p><strong>Description:</strong> Developed a communication channel integration platform with a focus on voice, SMS, WhatsApp, and app notification APIs.</p>
+                    <p><strong>Technologies:</strong> Spring Boot, Microservices, Java, Apache Kafka</p>
+                </div>
+                <div class="project-item">
+                    <h3>Hostel Automation</h3>
+                    <p><strong>Description:</strong> Automated hostel management tasks, including student attendance tracking and parent notifications.</p>
+                    <p><strong>Technologies:</strong> Spring Boot, Face Recognition, Java</p>
+                </div>
+                <div class="project-item">
+                    <h3>Employee Management Portal</h3>
+                    <p><strong>Description:</strong> Contributed to the development of an employee management portal.</p>
+                    <p><strong>Technologies:</strong> Spring MVC, Java</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sandip Bagul. All rights reserved.</p>
+    </footer>
 </body>
 </html>
